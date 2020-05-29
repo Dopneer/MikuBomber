@@ -41,7 +41,12 @@ const puppeteer = require('puppeteer');
 
 phones =
 [
-	"9607610822"
+	// Enter numbers in format (xxx) xxx-xx-xx
+	// Without +7. Only Russian numbers
+	"9384402893",
+	"9990232412",
+	"9231312858"
+	// Example, do not DDoS pls
 ]
 delay = 5000;
 
@@ -51,6 +56,8 @@ delay = 5000;
 
 for(var i = 0; i < phones.length; i++)
 {
+
+
 	ParseSites(await puppeteer.launch({ headless: false }), phones[i]);
 }
 
