@@ -21,6 +21,7 @@ porussia = require("./registration/reg_porussia");
 
 sites =
 [
+	zakazaka,
 	dc,
 	vk,
 	ok,
@@ -32,33 +33,31 @@ sites =
 	fap,
 	drom,
 	insta,
-	zakazaka,
 	porussia,
 ]
 
 
 const puppeteer = require('puppeteer');
 
-phones =
+var phones =
 [
-	// Enter numbers in format (xxx) xxx-xx-xx
-	// Without +7. Only Russian numbers
-	"9384402893",
-	"9990232412",
-	"9231312858"
-	// Example, do not DDoS pls
-]
-delay = 5000;
 
+]
+
+
+phones = fs.readFileSync("assets/phones.txt").toString().split('\n');;
+
+delay = 5000;
 
 (async () =>
 {
 
 for(var i = 0; i < phones.length; i++)
 {
+	// Open new browser for each phone
+	// Then parse sites (without async)
+	ParseSites(await puppeteer.launch({ headless: true }), phones[i]);
 
-
-	ParseSites(await puppeteer.launch({ headless: false }), phones[i]);
 }
 
 
