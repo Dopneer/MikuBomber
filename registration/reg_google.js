@@ -24,7 +24,7 @@ async function Parse(page, number)
 	await page.type('#phoneNumberId', "+7" + number, {delay: 60});
 
 	await page.click('#view_container > div > div > div.pwWryf.bxPAYd > div > div.zQJV3 > div > div.qhFLie > div');
-
+	await page.waitFor(500);
 }
 
 module.exports.Parse = Parse;

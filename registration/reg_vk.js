@@ -38,12 +38,20 @@ async function Parse(page, number)
 
 	await page.type('input[id="join_phone"]', number, {delay: 60});
 
-	await page.click('#join_accept_terms_checkbox > div.checkbox');
+	try
+	{
+		await page.click('#join_accept_terms_checkbox > div.checkbox');
+	}
+	catch(e)
+	{
+		
+	}
 
 	await page.waitFor(50);
 
 	await page.click('#join_send_phone');
 
+	await page.waitFor(500);
 
 
 }

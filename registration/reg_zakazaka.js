@@ -7,7 +7,7 @@ function between(min, max) {
 async function Parse(page, number)
 {
 
-	page.goto("https://sochi.zakazaka.ru/");
+	page.goto("https://spb.zakazaka.ru/");
 
 	email = "sfjiwefr";
 
@@ -17,6 +17,15 @@ async function Parse(page, number)
 	}
 
 	await page.waitFor(3000);
+
+	var [btnn] = await page.$$('#modal > div.modal.modal-city.modal--open > div > div > button.btn.btn--dialog.btn--grey');
+
+	if(btnn)
+	{
+		await btnn.click();
+		await page.waitFor(500);
+	}
+
 
 	try
 	{
@@ -48,6 +57,8 @@ async function Parse(page, number)
 	{
     	await button.click();
 	}
+
+	await page.waitFor(2000);
 
 }
 

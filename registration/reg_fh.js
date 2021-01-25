@@ -7,6 +7,8 @@ async function Parse(page, number)
 
 
 	await page.click('#profile_type-1');
+	await page.waitFor(100);
+	await page.click('#developer_interested_in_remote_jobs');
 
 	await page.type('input[id="phone-0"]', "+7" + number, {delay: 60});
 
