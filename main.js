@@ -33,6 +33,21 @@ debug_sites =
 
 
 phones = fs.readFileSync("assets/phones.txt").toString().split('\n');
+
+for(var i = 0; i < phones.length; i++)
+{
+	if(phones[i] == "")
+	{
+		phones.splice(i, 1);
+		i--;
+	}
+	else if(phones[i][0] == "+" && phones[i][1] == "7")
+	{
+		phones[i] = phones[i].slice(2);
+	}
+	
+}
+
 proxies = fs.readFileSync("assets/proxies.txt").toString().split('\n');
 
 main();
