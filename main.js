@@ -48,10 +48,14 @@ for(var i = 0; i < phones.length; i++)
 	
 }
 
+if(phones.length < 1)
+{
+	console.log("There are no correct numbers into assets/numbers.txt");
+}
+
 proxies = fs.readFileSync("assets/proxies.txt").toString().split('\n');
 
 main();
-
 
 async function main()
 {
