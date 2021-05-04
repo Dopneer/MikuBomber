@@ -1,7 +1,5 @@
 # MikuBomer
 
-## How to use
-
 1. Install packages:
 	+ Install node.js
 	+ ```npm install puppeteer```
