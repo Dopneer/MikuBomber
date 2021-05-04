@@ -2,7 +2,6 @@
 
 1. Install packages:
 	+ Install node.js
-	+ Terminal command:  
 	+ ```npm install puppeteer```
 
 2. Configure app:
@@ -13,7 +12,6 @@
 
 3. Run app:
 	+ Go to main folder (MikuBomber)
-	+ Terminal command:  
 	+ ```node main.js```
 
 
