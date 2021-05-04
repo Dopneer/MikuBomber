@@ -1,17 +1,17 @@
-# MikuBomer
+## MikuBomer
 
-## Install packages:
+1. Install packages:
 	+ Install node.js
 	+ Terminal command:  
 	+ ```npm install puppeteer```
 
-## Configure app:
+2. Configure app:
 	+ Go to assets/phones.txt
 	+ Add number and save
 	+ (You can add more than 1 number)
 	+ (Supports only Russian numbers)
 
-## Run app:
+3. Run app:
 	+ Go to main folder (MikuBomber)
 	+ Terminal command:  
 	+ ```node main.js```
