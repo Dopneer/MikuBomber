@@ -1,7 +1,7 @@
 # MikuBomer
 
-1. Install packages:
-	+ Install node.js
+1. Install dependencies:
+	+ Download node.js
 	+ ```npm install puppeteer```
 
 2. Configure app:
