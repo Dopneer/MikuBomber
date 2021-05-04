@@ -12,3 +12,4 @@
 	+ node main.js
 
 If you have some bugs create new issue at https://github.com/Dopneer/MikuBomber/issues
+Of course you need to download node.js
